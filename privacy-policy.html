@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ParkPin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0e14;
+      --surface:   #13181f;
+      --border:    #1e2530;
+      --primary:   #00cf91;
+      --text:      #ecedf6;
+      --muted:     #8a9bb0;
+      --radius:    12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 16px 64px;
+    }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .wordmark svg {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .wordmark span {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+
+    .summary-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .summary-card strong {
+      color: var(--primary);
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    li strong, p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .chip {
+      display: inline-block;
+      background: rgba(0, 207, 145, 0.12);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2C10.477 2 6 6.477 6 12c0 7.5 10 18 10 18s10-10.5 10-18c0-5.523-4.477-10-10-10z" fill="#00cf91"/>
+      <circle cx="16" cy="12" r="4" fill="#0b0e14"/>
+    </svg>
+    <span>ParkPin</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>Effective date: March 28, 2026 &nbsp;·&nbsp; Last updated: March 28, 2026</p>
+</header>
+
+<main>
+
+  <div class="summary-card">
+    <p>
+      <strong>The short version:</strong> ParkPin saves your parked car's location on your device only.
+      We do not collect, store, or sell your personal data. Location coordinates are used solely to
+      display your pin on the map and calculate a walking route back to your car.
+    </p>
+  </div>
+
+  <section>
+    <h2>1. Who We Are</h2>
+    <p>
+      ParkPin is a mobile application that helps you remember where you parked your car. It is
+      developed and operated as an independent app. If you have questions about this policy,
+      contact us at <a href="mailto:privacy@parkpin.app">privacy@parkpin.app</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Information We Collect</h2>
+
+    <span class="chip">Location Data</span>
+    <p>
+      ParkPin requests access to your device's GPS location for two purposes:
+    </p>
+    <ul>
+      <li><strong>Saving your parked location</strong> — when you tap "Pin My Car", your current GPS coordinates are saved locally on your device using on-device SQLite storage. No location data is sent to our servers.</li>
+      <li><strong>Calculating a walking route</strong> — when you request directions back to your car, your current location and your pinned location are sent to a secure server-side proxy to retrieve a walking route from Google Maps. These coordinates are used only to compute the route and are not stored or logged.</li>
+    </ul>
+
+    <span class="chip">Crash Reports</span>
+    <p>
+      ParkPin uses <strong>Firebase Crashlytics</strong> (by Google) to collect anonymized crash
+      reports when the app experiences an unexpected error. This data includes device model, OS
+      version, and a stack trace of the crash. It does not include your name, email, or location.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Information We Do NOT Collect</h2>
+    <ul>
+      <li>We do not require account registration or collect your name, email, or any personal identifiers.</li>
+      <li>We do not store your location history on any server.</li>
+      <li>We do not track your movements or build a profile of where you have been.</li>
+      <li>We do not serve ads and do not share data with advertisers.</li>
+      <li>We do not sell your data to any third party.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. How Your Data Is Stored</h2>
+    <p>
+      Your pinned location is stored in an on-device SQLite database. This data never leaves your
+      device except when you explicitly request walking directions (see Section 2). Clearing the pin
+      or uninstalling the app permanently removes all stored data.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Third-Party Services</h2>
+    <p>ParkPin uses the following third-party services, each with their own privacy practices:</p>
+    <ul>
+      <li>
+        <strong>Google Maps Platform</strong> — used to display maps and calculate walking routes.
+        When you request directions, your origin and destination coordinates are processed by Google.
+        See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Firebase Crashlytics (Google)</strong> — anonymized crash reporting.
+        See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Children's Privacy</h2>
+    <p>
+      ParkPin is not directed at children under the age of 13. We do not knowingly collect personal
+      information from children. If you believe a child has provided us with personal information,
+      please contact us and we will delete it promptly.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Your Rights</h2>
+    <p>
+      Since ParkPin stores all data locally on your device, you have full control over your data at
+      all times. You can:
+    </p>
+    <ul>
+      <li>Clear your pinned location at any time within the app.</li>
+      <li>Revoke location permission at any time in your device settings.</li>
+      <li>Delete all app data by uninstalling ParkPin.</li>
+    </ul>
+    <p>
+      If you are in the European Economic Area (EEA), you have rights under GDPR including the right
+      to access, rectify, or erase your data. Contact us at
+      <a href="mailto:hbilalcam@gmail.com">hbilalcam@gmail.com</a> to exercise these rights.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The "Last updated" date at the top of
+      this page will reflect any changes. Continued use of the app after changes constitutes
+      acceptance of the revised policy.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Contact</h2>
+    <p>
+      For any privacy-related questions or requests, please contact:<br/>
+      <a href="mailto:hbilalcam@gmail.com">hbilalcam@gmail.com</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 ParkPin. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
